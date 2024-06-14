@@ -18,7 +18,7 @@ export default function Home() {
           </TabPanel>
         </TabPanels>
       </Tabs>
-      <h1 className="text-4xl font-bold">Test 2222222222222222222222222222 444444444444444444444444</h1>
+      <h1 className="text-4xl font-bold">Test test test</h1>
       <Link href='/profile' color='blue.400' _hover={{ color: 'blue.500' }}>
       Profile
     </Link>
