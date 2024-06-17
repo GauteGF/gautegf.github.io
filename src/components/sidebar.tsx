@@ -21,8 +21,6 @@ import {
   MenuDivider,
   MenuItem,
   MenuList,
-  SkeletonCircle,
-  SkeletonText,
 } from '@chakra-ui/react'
 import {
   FiHome,
@@ -35,7 +33,7 @@ import {
   FiChevronDown,
 } from 'react-icons/fi'
 import { IconType } from 'react-icons'
-import HorizontalCard from './horizontal_card'
+import PageContent from './page_content'
 
 interface LinkItemProps {
   name: string
@@ -216,20 +214,7 @@ const SidebarWithHeader = () => {
       <MobileNav onOpen={onOpen} />
       <Box ml={{ base: 0, md: 60 }} p="4">
         {
-            <Box gap={30} display={"flex"} flexDirection={"column"}>
-              <Text fontSize="xl">Projects</Text>
-              <Box padding='6' boxShadow='lg' bg='white' borderRadius={5}>
-                <SkeletonCircle size='10' />
-                <SkeletonText mt='4' noOfLines={4} spacing='4' skeletonHeight='2' />
-                </Box>
-                <HorizontalCard 
-                title='Tradjectory' 
-                description='Analysis of Propulse rockets tradejectory compared to the tracking of our Radionor radio.'
-                imageUrl='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQIvif0A3L9TqcOoaBKIwj3BJCPvnOa6rV5A&s'
-                linkTo='https://folk.ntnu.no/gautegf/Bifrost_launch.html'
-                />
-                <HorizontalCard />
-            </Box>
+            <PageContent />
 
         }
       </Box>
