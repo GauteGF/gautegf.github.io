@@ -1,7 +1,6 @@
 import { Link } from '@chakra-ui/next-js';
 import { Button, Heading, Image, Stack, Text, Card, CardBody, CardFooter } from '@chakra-ui/react'
 
-// Make props optional
 interface HorizontalCardProps {
   title?: string;
   imageUrl?: string;
@@ -11,11 +10,11 @@ interface HorizontalCardProps {
 }
 
 export default function HorizontalCard({
-  title = 'Default Title', // Default value for title
-  imageUrl = 'https://via.placeholder.com/200', // Default value for imageUrl
-  imageAlt = 'Default Image', // Default value for imageAlt
-  description = 'Default description', // Default value for description
-  linkTo = '' // Default value for linkTo
+  title = 'Default Title', 
+  imageUrl = 'https://via.placeholder.com/200', 
+  imageAlt = 'Default Image', 
+  description = 'Default description', 
+  linkTo = '' 
 }: HorizontalCardProps) {
     return (
     <Card
