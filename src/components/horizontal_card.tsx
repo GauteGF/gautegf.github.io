@@ -7,13 +7,15 @@ interface HorizontalCardProps {
   imageUrl?: string;
   imageAlt?: string;
   description?: string;
+  linkTo?: string;
 }
 
 export default function HorizontalCard({
   title = 'Default Title', // Default value for title
   imageUrl = 'https://via.placeholder.com/200', // Default value for imageUrl
   imageAlt = 'Default Image', // Default value for imageAlt
-  description = 'Default description' // Default value for description
+  description = 'Default description', // Default value for description
+  linkTo = '' // Default value for linkTo
 }: HorizontalCardProps) {
     return (
     <Card
@@ -38,7 +40,7 @@ export default function HorizontalCard({
         </CardBody>
 
         <CardFooter>
-        <Link href={'https://folk.ntnu.no/gautegf/Bifrost_launch.html'} isExternal>
+        <Link href={linkTo} isExternal>
             <Button variant='solid' colorScheme='blue'>
                 Go to project
             </Button>
