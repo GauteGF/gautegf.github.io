@@ -226,6 +226,7 @@ const SidebarWithHeader = () => {
                 title='Tradjectory' 
                 description='Analysis of Propulse rockets tradejectory compared to the tracking of our Radionor radio.'
                 imageUrl='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQIvif0A3L9TqcOoaBKIwj3BJCPvnOa6rV5A&s'
+                linkTo='https://folk.ntnu.no/gautegf/Bifrost_launch.html'
                 />
                 <HorizontalCard />
             </Box>
