@@ -1,7 +1,7 @@
 'use client'
 
 import { Box, SkeletonCircle, SkeletonText, Text } from "@chakra-ui/react";
-import HorizontalCard from "./horizontal_card";
+import HorizontalCard from "../components/horizontal_card";
 
 
 export default function PageContent() {
