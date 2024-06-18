@@ -33,16 +33,18 @@ import {
   FiChevronDown,
 } from 'react-icons/fi'
 import { IconType } from 'react-icons'
-import PageContent from './page_content'
+import PageContent from '../app/page_content'
 
 interface LinkItemProps {
   name: string
   icon: IconType
+  linkTo: string
 }
 
 interface NavItemProps extends FlexProps {
   icon: IconType
   children: React.ReactNode
+  linkTo: string
 }
 
 interface MobileProps extends FlexProps {
@@ -53,12 +55,16 @@ interface SidebarProps extends BoxProps {
   onClose: () => void
 }
 
+interface SidebarWithHeaderProps {
+  pageContent: React.ElementType; 
+}
+
 const LinkItems: Array<LinkItemProps> = [
-  { name: 'Home', icon: FiHome },
-  { name: 'Trending', icon: FiTrendingUp },
-  { name: 'Explore', icon: FiCompass },
-  { name: 'Favourites', icon: FiStar },
-  { name: 'Settings', icon: FiSettings },
+  { name: 'Home', icon: FiHome, linkTo: '../' },
+  { name: 'Grid page', icon: FiTrendingUp, linkTo : 'grid_page'},
+  { name: 'Explore', icon: FiCompass, linkTo: 'explore'},
+  { name: 'Favourites', icon: FiStar, linkTo: 'favourites'},
+  { name: 'Settings', icon: FiSettings, linkTo: 'settings'},
 ]
 
 const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
@@ -79,7 +85,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
       {LinkItems.map((link) => (
-        <NavItem key={link.name} icon={link.icon}>
+        <NavItem key={link.name} icon={link.icon} linkTo={link.linkTo}>
           {link.name}
         </NavItem>
       ))}
@@ -87,11 +93,11 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
   )
 }
 
-const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
+const NavItem = ({ icon, children, linkTo, ...rest }: NavItemProps) => {
   return (
     <Box
       as="a"
-      href="#"
+      href= {linkTo}
       style={{ textDecoration: 'none' }}
       _focus={{ boxShadow: 'none' }}>
       <Flex
@@ -192,8 +198,8 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
     </Flex>
   )
 }
-
-const SidebarWithHeader = () => {
+//SidebarWithHeader takes in a pageContent prop which is relative to which page is rendered
+const SidebarWithHeader: React.FC<SidebarWithHeaderProps> = ({ pageContent: PageContent }) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
