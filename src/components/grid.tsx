@@ -4,6 +4,7 @@ import GridLayout from 'react-grid-layout';
 import 'react-grid-layout/css/styles.css';
 import 'react-resizable/css/styles.css';
 import { Box, Button, Text } from "@chakra-ui/react";
+import { LineChart, Line } from 'recharts';
 
 const ExampleGrid = () => {
    
@@ -65,7 +66,7 @@ const ExampleGrid = () => {
         console.log("Removed item from layout");
         console.log(newLayout);
     };
-
+    
   return (
     <>
     <Button onClick={addItemToLayout} colorScheme="blue" m={4}>Add Item</Button>
