@@ -11,11 +11,11 @@ interface SidebarItemProps {
 }
 
 const sidebarItems: SidebarItemProps[] = [
-  { id: 1, label: 'Home', icon: FaHome, href: '#home' },
-  { id: 2, label: 'Projects', icon: FaProjectDiagram, href: '#projects' },
+  { id: 1, label: 'Home', icon: FaHome, href: '../' },
+  { id: 2, label: 'Projects', icon: FaProjectDiagram, href: 'projects' },
   { id: 3, label: 'Videos', icon: FaVideo, href: '#videos' },
-  { id: 4, label: 'About', icon: FaUser, href: '#about' },
-  { id: 5, label: 'Contact', icon: FaEnvelope, href: '#contact' },
+  { id: 4, label: 'About', icon: FaUser, href: 'about' },
+  { id: 5, label: 'Contact', icon: FaEnvelope, href: 'contact' },
 ];
 
 const SidebarItem: React.FC<SidebarItemProps> = ({ label, icon, href }) => (
@@ -26,10 +26,11 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ label, icon, href }) => (
     variant="ghost"
     justifyContent="center"
     width="100%"
-    colorScheme="whiteAlpha"
+    m={1.5}
+    colorScheme="#8b8b8b"
     _hover={{ color: 'white' }}
   >
-    {label}
+    <Box textAlign={"left"} width={"30%"} >{label}</Box>
   </Button>
 );
 
@@ -39,21 +40,17 @@ const Sidebar = () => {
       as="nav"
       direction="column"
       align="center"
-      justify="center"
-      bg="black"
+      bg="#222831"
       color="white"
       p={4}
       minH="100vh"
       boxShadow="xl"
     >
       {/* Profile Section */}
-      <Avatar size="xl" name="Default Image" src="https://via.placeholder.com/150" mb={4} />
-      <Box textAlign="center" mb={6}>
+      <Box textAlign="center" mb={"8vh"} mt={"8vh"}>
+      <Avatar size="xl" name="Default Image" src="https://via.placeholder.com/150" mb={4}/>
         <Text fontSize="xl" fontWeight="bold">
           Gaute Flægstad
-        </Text>
-        <Text fontSize="sm">
-          Student
         </Text>
         <Text fontSize="sm">
           Datateknologi - NTNU
