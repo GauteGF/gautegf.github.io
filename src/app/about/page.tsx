@@ -1,12 +1,23 @@
 'use client';
-import { Link } from '@chakra-ui/next-js'
+import { Grid, GridItem, Text} from '@chakra-ui/react'
+import Navbar from '@/components/navbar'
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1 className="text-4xl font-bold">Test</h1>
-      <Link href='../' color='blue.400' _hover={{ color: 'blue.500' }}>
-      Profile
-    </Link>
+    <main>
+      <Grid
+        templateAreas={`"nav main"
+                        "nav footer"`}
+        gridTemplateRows={'100vh 1fr 0px'}
+        gridTemplateColumns={'23vw 1fr'}
+        h='100vh'
+        color='blackAlpha.700'
+        fontWeight='bold'
+      >
+        <Navbar />
+        <GridItem pl='2' bg='green.300' area={'main'}>
+          <Text fontSize={'xl'}>ABOUT</Text>
+        </GridItem>
+      </Grid>
     </main>
   );
 }
