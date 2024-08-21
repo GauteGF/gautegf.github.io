@@ -16,6 +16,7 @@ export default function Home() {
         <Navbar />
         <GridItem pl='2' bg='green.300' area={'main'}>
           <Text fontSize={'xl'}>PROJECTS</Text>
+          <a href="projects/github_pages_guide">GUIDE</a>
         </GridItem>
       </Grid>
     </main>
