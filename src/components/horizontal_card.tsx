@@ -1,5 +1,14 @@
-import { Link } from '@chakra-ui/next-js';
-import { Button, Heading, Image, Stack, Text, Card, CardBody, CardFooter } from '@chakra-ui/react'
+import { Link } from "@chakra-ui/next-js";
+import {
+  Button,
+  Heading,
+  Image,
+  Stack,
+  Text,
+  Card,
+  CardBody,
+  CardFooter,
+} from "@chakra-ui/react";
 
 interface HorizontalCardProps {
   title?: string;
@@ -10,41 +19,40 @@ interface HorizontalCardProps {
 }
 
 export default function HorizontalCard({
-  title = 'Default Title', 
-  imageUrl = 'https://via.placeholder.com/200', 
-  imageAlt = 'Default Image', 
-  description = 'Default description', 
-  linkTo = '' 
+  title = "Default Title",
+  imageUrl = "https://via.placeholder.com/200",
+  imageAlt = "Default Image",
+  description = "Default description",
+  linkTo = "",
 }: HorizontalCardProps) {
-    return (
+  return (
     <Card
-    direction={{ base: 'column', sm: 'row' }}
-    overflow='hidden'
-    variant='outline'
+      direction={{ base: "column", sm: "row" }}
+      overflow="hidden"
+      variant="outline"
     >
-    <Image
-        objectFit='cover'
-        maxW={{ base: '100%', sm: '200px' }}
+      <Image
+        objectFit="cover"
+        maxW={{ base: "100%", sm: "200px" }}
         src={imageUrl}
         alt={imageAlt}
-    />
+      />
 
-    <Stack>
+      <Stack>
         <CardBody>
-        <Heading size='md'>{title}</Heading>
+          <Heading size="md">{title}</Heading>
 
-        <Text py='2'>
-            {description}
-        </Text>
+          <Text py="2">{description}</Text>
         </CardBody>
 
         <CardFooter>
-        <Link href={linkTo} isExternal>
-            <Button variant='solid' colorScheme='blue'>
-                Go to project
+          <Link href={linkTo} isExternal>
+            <Button variant="solid" colorScheme="blue">
+              Go to project
             </Button>
-        </Link>
+          </Link>
         </CardFooter>
-    </Stack>
+      </Stack>
     </Card>
-)}
+  );
+}
