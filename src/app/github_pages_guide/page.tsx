@@ -58,7 +58,7 @@ export default function github_pages_guide() {
         <Text fontSize="xs">
           Author: Gaute Greiff Flægstad
           <br />
-          Last updated: August 20th 2024
+          Last updated: August 22nd 2024
           <br />
           <br />
         </Text>
@@ -87,7 +87,7 @@ export default function github_pages_guide() {
           frontend, which is a widely used and modern componet based framework.
           The concept is to build resuable chunks of code to make development of
           more complex sites easier. We will also use a component library called
-          Chakra UI to import prebuilt components. These kinds of libraries can
+          Material UI to import prebuilt components. These kinds of libraries can
           save a lot of time, and are very easy to customize to your liking, as
           will be showed later. As for the programming language, Typescript is
           my preferred option. It is basically Javascript, but with type
@@ -117,6 +117,7 @@ export default function github_pages_guide() {
             <ListItem>Create a repository </ListItem>
             <ListItem>Add an SSH key </ListItem>
             <ListItem>Clone the repository</ListItem>
+            <ListItem>Install some needed tools</ListItem>
             <ListItem>Create the react project </ListItem>
             <ListItem>Add auto syncing </ListItem>
           </UnorderedList>
@@ -248,7 +249,7 @@ export default function github_pages_guide() {
                     When prompted to enter passphrase, either set a memorable
                     password or press Enter to leave it empty. Setting a
                     password is of course more secure, but isn`t strictly
-                    necessary. If you do choose to, I recommend adding your key
+                    necessary. If you choose to do so, I recommend adding your key
                     to an SSH agent to avoid having to enter a password every
                     time the key is used. Check out SSH agents in
                     <Link
@@ -833,7 +834,7 @@ export default function github_pages_guide() {
         <StyledTextbox>
           <Box>
             <Text fontSize={"xl"} fontWeight={"bold"}>
-              Automatical deployment
+              Automatic deployment
             </Text>
             <Text mb={4}>
               Navigate into your repository, and click "Settings".
