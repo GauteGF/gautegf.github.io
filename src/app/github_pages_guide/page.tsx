@@ -87,10 +87,10 @@ export default function github_pages_guide() {
           frontend, which is a widely used and modern componet based framework.
           The concept is to build resuable chunks of code to make development of
           more complex sites easier. We will also use a component library called
-          Material UI to import prebuilt components. These kinds of libraries can
-          save a lot of time, and are very easy to customize to your liking, as
-          will be showed later. As for the programming language, Typescript is
-          my preferred option. It is basically Javascript, but with type
+          Material UI to import prebuilt components. These kinds of libraries
+          can save a lot of time, and are very easy to customize to your liking,
+          as will be showed later. As for the programming language, Typescript
+          is my preferred option. It is basically Javascript, but with type
           declaration to save yourself some confusing errors while developing.
           For styling, either css, scss, or tailwind can be used, but when using
           a component library I find that I rarely (or never) have a need for
@@ -249,9 +249,9 @@ export default function github_pages_guide() {
                     When prompted to enter passphrase, either set a memorable
                     password or press Enter to leave it empty. Setting a
                     password is of course more secure, but isn`t strictly
-                    necessary. If you choose to do so, I recommend adding your key
-                    to an SSH agent to avoid having to enter a password every
-                    time the key is used. Check out SSH agents in
+                    necessary. If you choose to do so, I recommend adding your
+                    key to an SSH agent to avoid having to enter a password
+                    every time the key is used. Check out SSH agents in
                     <Link
                       isExternal
                       color="blue.500"

@@ -37,7 +37,7 @@ const Terminal: React.FC<TerminalDisplayProps> = ({ commands }) => {
           style={{
             color: "#a6a8a8",
             fontFamily: "inherit", // Ensure font consistency
-            fontSize: "inherit",   // Ensure font size consistency
+            fontSize: "inherit", // Ensure font size consistency
           }}
         >
           bash
@@ -52,7 +52,7 @@ const Terminal: React.FC<TerminalDisplayProps> = ({ commands }) => {
               color: "#a6a8a8",
               cursor: "pointer",
               fontFamily: "inherit", // Ensure font consistency
-              fontSize: "inherit",   // Ensure font size consistency
+              fontSize: "inherit", // Ensure font size consistency
             }}
           >
             <FiClipboard style={{ marginRight: "5px" }} />
