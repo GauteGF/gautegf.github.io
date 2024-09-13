@@ -4,7 +4,7 @@ import React from "react";
 import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { tomorrowNight as theme } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { FiClipboard } from "react-icons/fi"; // You can use an icon library like react-icons
+import { FiClipboard } from "react-icons/fi";
 
 interface TerminalDisplayProps {
   commands: string;
@@ -33,7 +33,15 @@ const Terminal: React.FC<TerminalDisplayProps> = ({ commands }) => {
           borderTopRightRadius: "8px",
         }}
       >
-        <span style={{ color: "#a6a8a8" }}>bash</span>
+        <div
+          style={{
+            color: "#a6a8a8",
+            fontFamily: "inherit", // Ensure font consistency
+            fontSize: "inherit", // Ensure font size consistency
+          }}
+        >
+          bash
+        </div>
         <CopyToClipboard text={commands}>
           <button
             style={{
@@ -43,6 +51,8 @@ const Terminal: React.FC<TerminalDisplayProps> = ({ commands }) => {
               border: "none",
               color: "#a6a8a8",
               cursor: "pointer",
+              fontFamily: "inherit", // Ensure font consistency
+              fontSize: "inherit", // Ensure font size consistency
             }}
           >
             <FiClipboard style={{ marginRight: "5px" }} />
