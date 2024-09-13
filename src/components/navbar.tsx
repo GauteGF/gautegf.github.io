@@ -1,3 +1,4 @@
+"use client"
 import { Box, Flex } from "@chakra-ui/react";
 import { VStack, Avatar, Text, Button, Icon } from "@chakra-ui/react";
 import {
@@ -17,11 +18,11 @@ interface SidebarItemProps {
 }
 
 const sidebarItems: SidebarItemProps[] = [
-  { id: 1, label: "Home", icon: FaHome, href: "../" },
-  { id: 2, label: "Projects", icon: FaProjectDiagram, href: "projects" },
+  { id: 1, label: "Home", icon: FaHome, href: "./" },
+  { id: 2, label: "Projects", icon: FaProjectDiagram, href: "/general/projects" },
   { id: 3, label: "Videos", icon: FaVideo, href: "#videos" },
-  { id: 4, label: "About", icon: FaUser, href: "about" },
-  { id: 5, label: "Contact", icon: FaEnvelope, href: "contact" },
+  { id: 4, label: "About", icon: FaUser, href: "/general/about" },
+  { id: 5, label: "Contact", icon: FaEnvelope, href: "/general/contact" },
 ];
 
 const SidebarItem: React.FC<SidebarItemProps> = ({ label, icon, href }) => (
