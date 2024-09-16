@@ -1,6 +1,6 @@
 "use client";
 import ProjectsGrid from "@/components/projectsGrid";
-export default function Page() {
+export default function Projects() {
   return (
     <main>
       <ProjectsGrid />
