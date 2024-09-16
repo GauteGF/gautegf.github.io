@@ -9,6 +9,7 @@ import {
   FaVideo,
 } from "react-icons/fa";
 import { IconType } from "react-icons/lib";
+import Link from "next/link";
 
 interface SidebarItemProps {
   id: number;
@@ -31,21 +32,21 @@ const sidebarItems: SidebarItemProps[] = [
 ];
 
 const SidebarItem: React.FC<SidebarItemProps> = ({ label, icon, href }) => (
-  <Button
-    as="a"
-    href={href}
-    leftIcon={<Icon as={icon} />}
-    variant="ghost"
-    justifyContent="center"
-    width="100%"
-    m={1.5}
-    colorScheme="#8b8b8b"
-    _hover={{ color: "white" }}
-  >
-    <Box textAlign={"left"} width={"30%"}>
-      {label}
-    </Box>
-  </Button>
+  <Link href={href} passHref>
+    <Button
+      leftIcon={<Icon as={icon} />}
+      variant="ghost"
+      justifyContent="center"
+      width="100%"
+      m={1.5}
+      colorScheme="#8b8b8b"
+      _hover={{ color: "white" }}
+    >
+      <Box textAlign={"left"} width={"30%"}>
+        {label}
+      </Box>
+    </Button>
+  </Link>
 );
 
 const Sidebar = () => {
@@ -54,7 +55,7 @@ const Sidebar = () => {
       as="nav"
       direction="column"
       align="center"
-      bg="#222831"
+      bg="#1A1A1A"
       color="white"
       p={4}
       minH="100vh"
