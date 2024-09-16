@@ -110,10 +110,10 @@ const Home = () => {
             overflow={"hidden"}
             overflowY={"scroll"}
           >
-            <Heading as="h2" size="xl" color="white" textAlign="center" mt={8}>
+            <Heading as="h2" size="lg" color="white" textAlign="center" mt={10}>
               3rd year
             </Heading>
-            <Heading as="h2" size="md" color="white" textAlign="center" mt={2}>
+            <Heading as="h2" size="sm" color="white" textAlign="center" mt={2}>
               Computer Science
             </Heading>
           </Box>
@@ -121,7 +121,7 @@ const Home = () => {
             gridColumn="span 2"
             p={4}
             pl={"6vw"}
-            pr={"4vw"}
+            pr={"6vw"}
             gridRow="span 2"
             bg="#1A1A1A"
             borderColor={"#4D4D4D"}
@@ -131,23 +131,23 @@ const Home = () => {
             overflow={"hidden"}
             overflowY={"scroll"}
           >
-            <Heading as="h2" size="xl" color="white" textAlign="left" mt={2}>
+            <Heading as="h2" size="lg" color="white" textAlign="left" mt={4}>
               Current Positions
             </Heading>
             <Divider mt={2} />
-            <Heading size="lg" color="white" textAlign="left" mt={4}>
+            <Heading size="md" color="white" textAlign="left" mt={4}>
               Chief DevOps Engineer
             </Heading>
             <Text color="grey" textAlign="left">
               Propulse NTNU
             </Text>
-            <Heading size="lg" color="white" textAlign="left" mt={4}>
+            <Heading size="md" color="white" textAlign="left" mt={4}>
               Web Developer
             </Heading>
             <Text color="grey" textAlign="left">
               Norsk Helsenett
             </Text>
-            <Heading size="lg" color="white" textAlign="left" mt={4}>
+            <Heading size="md" color="white" textAlign="left" mt={4}>
               Coding Teacher
             </Heading>
             <Text color="grey" textAlign="left">
@@ -223,12 +223,12 @@ const Home = () => {
               size="lg"
               color="white"
               textAlign="center"
-              mt={4}
-              mb={4}
+              mt={6}
+              mb={6}
             >
               Experienced with
             </Heading>
-            <SimpleGrid columns={[2, 3, 4]} spacing={4} p={4}>
+            <SimpleGrid columns={[2, 3, 4]} spacing={4} p={4} pt={0}>
               {technologies.map((tech, index) => (
                 <Box
                   key={index}
@@ -253,11 +253,13 @@ const Home = () => {
             borderWidth={1}
             borderRadius="md"
             height="38vh"
+            pl={"6vw"} 
+            pr={"6vw"}
           >
-            <Heading as="h2" size="lg" color="white" textAlign="center" mt={4}>
+            <Heading as="h2" size="lg" color="white" textAlign="left" mt={6} >
               About me
             </Heading>
-            <Text color="grey" textAlign="center" mt={4} p={4}>
+            <Text color="grey" textAlign="left" mt={6}>
               I am a 3rd year computer science student at NTNU, with
               specialication in software systems. I am currently lead of the
               DevOps team at the technical student organization Propulse NTNU,
