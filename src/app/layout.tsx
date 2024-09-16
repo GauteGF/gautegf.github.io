@@ -1,10 +1,10 @@
 import { Providers } from "./providers";
-import { Roboto_Mono } from '@next/font/google';
+import { Roboto_Mono } from "@next/font/google";
 
 const font = Roboto_Mono({
-  weight: ['400', '600', '700'],  // Specify font weights
-  subsets: ['latin'],  // Load the latin subset (or others if needed)
-  display: 'swap',  // Optional: to prevent layout shifts
+  weight: ["400", "600", "700"], // Specify font weights
+  subsets: ["latin"], // Load the latin subset (or others if needed)
+  display: "swap", // Optional: to prevent layout shifts
 });
 export const metadata = {
   title: "Portfolio",

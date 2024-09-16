@@ -29,7 +29,10 @@ export default function FolderLayout({
         className={robotoMono.className}
       >
         <Navbar />
-        <GridItem bg="linear-gradient(135deg, #1F1F1F 0%, #3D3D3D 100%)" area={"main"}>
+        <GridItem
+          bg="linear-gradient(135deg, #1F1F1F 0%, #3D3D3D 100%)"
+          area={"main"}
+        >
           {children}
         </GridItem>
       </Grid>
