@@ -22,9 +22,9 @@ export default function FolderLayout({
       <Grid
         templateAreas={`"nav main"
                         "nav footer"`}
-        gridTemplateRows={"100vh 1fr 0px"}
+        gridTemplateRows={"100% 1fr 0px"}
         gridTemplateColumns={"23vw 1fr"}
-        h="100vh"
+        minH={"100vh"}
         color="blackAlpha.700"
         className={robotoMono.className}
       >
