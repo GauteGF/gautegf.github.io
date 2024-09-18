@@ -268,7 +268,7 @@ const Home = () => {
             <Link href="/general/about">
               <Text
                 color="teal.500"
-                textAlign="center"
+                textAlign="left"
                 mt={2}
                 textDecoration={"underline"}
               >
