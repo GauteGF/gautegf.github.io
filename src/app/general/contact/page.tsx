@@ -4,8 +4,8 @@ import Navbar from "@/components/navbar";
 import ContactInfo from "@/components/contactInfo";
 export default function Contact() {
   return (
-  <main>
-    <ContactInfo />
-  </main>
+    <main>
+      <ContactInfo />
+    </main>
   );
 }

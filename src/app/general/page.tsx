@@ -253,10 +253,10 @@ const Home = () => {
             borderWidth={1}
             borderRadius="md"
             height="38vh"
-            pl={"6vw"} 
+            pl={"6vw"}
             pr={"6vw"}
           >
-            <Heading as="h2" size="lg" color="white" textAlign="left" mt={6} >
+            <Heading as="h2" size="lg" color="white" textAlign="left" mt={6}>
               About me
             </Heading>
             <Text color="grey" textAlign="left" mt={6}>

@@ -1,6 +1,6 @@
-import { Box, Image, Flex, IconButton } from '@chakra-ui/react';
-import { useState } from 'react';
-import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
+import { Box, Image, Flex, IconButton } from "@chakra-ui/react";
+import { useState } from "react";
+import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 
 // Define a type for the props
 interface ProjectCarouselProps {
@@ -14,14 +14,14 @@ export const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ images }) => {
   // Function to handle going to the previous image
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1,
     );
   };
 
   // Function to handle going to the next image
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1,
     );
   };
 
@@ -63,10 +63,10 @@ export const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ images }) => {
         {images.map((image, index) => (
           <Box
             key={index}
-            border={index === currentIndex ? '2px solid white' : 'none'}
+            border={index === currentIndex ? "2px solid white" : "none"}
             onClick={() => setCurrentIndex(index)}
             cursor="pointer"
-            _hover={{ borderColor: 'gray.300' }}
+            _hover={{ borderColor: "gray.300" }}
           >
             <Image
               src={image}

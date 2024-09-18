@@ -15,7 +15,7 @@ import {
   useDisclosure,
   Heading,
   SimpleGrid,
-  HStack
+  HStack,
 } from "@chakra-ui/react";
 import { useState } from "react";
 
@@ -24,8 +24,13 @@ const projects = [
     title: "Portfolio Guide",
     imageSrc: "/portfolio_guide.png",
     gifSrc: "/portfolio_guide_preview.gif",
-    description: "A detailed guide on how to build a portfolio using React, Chakra UI, and TypeScript.",
-    images: ["/portfolio_guide.png", "/portfolio_guide.png", "/portfolio_guide.png"],
+    description:
+      "A detailed guide on how to build a portfolio using React, Chakra UI, and TypeScript.",
+    images: [
+      "/portfolio_guide.png",
+      "/portfolio_guide.png",
+      "/portfolio_guide.png",
+    ],
     tags: ["React", "Chakra UI", "Typescript"],
     projectLink: "https://gautegf.github.io/github_pages_guide",
   },
@@ -50,7 +55,19 @@ const ProjectsGrid = () => {
   );
 };
 
-  const ProjectBox = ({ project }: { project: { title: string, imageSrc: string, gifSrc: string, description: string, images: string[], tags: string[], projectLink: string } }) => {
+const ProjectBox = ({
+  project,
+}: {
+  project: {
+    title: string;
+    imageSrc: string;
+    gifSrc: string;
+    description: string;
+    images: string[];
+    tags: string[];
+    projectLink: string;
+  };
+}) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [imageSrc, setImageSrc] = useState(project.imageSrc);
 
@@ -93,10 +110,7 @@ const ProjectsGrid = () => {
       </Box>
 
       <Modal isOpen={isOpen} onClose={onClose} isCentered size="2xl">
-        <ModalOverlay
-          backdropFilter="blur(10px)"
-          bg="rgba(0, 0, 0, 0.6)"
-        />
+        <ModalOverlay backdropFilter="blur(10px)" bg="rgba(0, 0, 0, 0.6)" />
         <ModalContent
           bg="#1F1F1F"
           color="white"
@@ -111,7 +125,12 @@ const ProjectsGrid = () => {
             <Text mb={4}>{project.description}</Text>
             <SimpleGrid columns={2} spacing={4}>
               {project.images.map((imgSrc, i) => (
-                <Image key={i} src={imgSrc} alt={`Project image ${i + 1}`} borderRadius="md" />
+                <Image
+                  key={i}
+                  src={imgSrc}
+                  alt={`Project image ${i + 1}`}
+                  borderRadius="md"
+                />
               ))}
             </SimpleGrid>
           </ModalBody>
@@ -144,7 +163,6 @@ const ProjectsGrid = () => {
           </HStack>
         </ModalContent>
       </Modal>
-
     </>
   );
 };

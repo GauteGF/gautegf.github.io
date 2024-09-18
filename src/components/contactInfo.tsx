@@ -2,21 +2,16 @@ import { Box, Heading, Text, VStack, Divider, Link } from "@chakra-ui/react";
 
 const ContactInfo = () => {
   return (
-    <Box
-      as="section"
-      minH="100vh"
-      p={{ base: 4, md: 8 }}
-      color="gray.100"
-    >
-      <VStack spacing={8} align="start" maxW="800px" >
-        
+    <Box as="section" minH="100vh" p={{ base: 4, md: 8 }} color="gray.100">
+      <VStack spacing={8} align="start" maxW="800px">
         {/* Heading */}
         <Heading as="h1" size="2xl">
           Get in Touch
         </Heading>
 
         <Text fontSize="lg" color="gray.400">
-          If you have any questions or would like to work with me, feel free to send me a message.
+          If you have any questions or would like to work with me, feel free to
+          send me a message.
         </Text>
 
         <Divider borderColor="gray.400" />
@@ -60,7 +55,6 @@ const ContactInfo = () => {
             LinkedIn profile
           </Link>
         </VStack>
-
       </VStack>
     </Box>
   );
