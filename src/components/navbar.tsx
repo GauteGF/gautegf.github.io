@@ -26,7 +26,6 @@ const sidebarItems: SidebarItemProps[] = [
     icon: FaProjectDiagram,
     href: "/general/projects",
   },
-  { id: 3, label: "Videos", icon: FaVideo, href: "#videos" },
   { id: 4, label: "About", icon: FaUser, href: "/general/about" },
   { id: 5, label: "Contact", icon: FaEnvelope, href: "/general/contact" },
 ];
@@ -72,7 +71,7 @@ const Sidebar = () => {
         <Text fontSize="xl" fontWeight="bold">
           Gaute Flægstad
         </Text>
-        <Text fontSize="sm">Datateknologi - NTNU</Text>
+        <Text fontSize="sm">Computer science - NTNU</Text>
       </Box>
 
       {/* Navigation Buttons */}
