@@ -5,7 +5,6 @@ import { Providers } from "../providers";
 import { Grid, GridItem } from "@chakra-ui/react";
 import Navbar from "@/components/navbar";
 
-const robotoMono = Roboto_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -26,7 +25,6 @@ export default function FolderLayout({
         gridTemplateColumns={"23vw 1fr"}
         minH={"100vh"}
         color="blackAlpha.700"
-        className={robotoMono.className}
       >
         <Navbar />
         <GridItem

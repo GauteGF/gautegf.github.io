@@ -14,6 +14,7 @@ import {
   Flex,
   Link,
 } from "@chakra-ui/react";
+import { Roboto, Protest_Guerrilla } from "@next/font/google";
 
 interface StyledTextboxProps extends BoxProps {
   children: React.ReactNode;
@@ -50,8 +51,8 @@ const PageDivider = ({ title }: { title: string }) => (
 
 export default function github_pages_guide() {
   return (
-    <main>
-      <Box p={4} bg={"#31363F"} h={"100%"} textColor={"white"}>
+    <main >
+      <Box p={4} bg={"#31363F"} h={"100%"} textColor={"white"} >
         <Text fontSize="3xl" mb={5}>
           Creating a portfolio{" "}
         </Text>
