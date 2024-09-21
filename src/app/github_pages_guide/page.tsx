@@ -13,6 +13,7 @@ import {
   Code,
   Flex,
   Link,
+  List,
 } from "@chakra-ui/react";
 import { Roboto, Protest_Guerrilla } from "@next/font/google";
 
@@ -120,6 +121,7 @@ export default function github_pages_guide() {
             <ListItem>Clone the repository</ListItem>
             <ListItem>Install some needed tools</ListItem>
             <ListItem>Create the react project </ListItem>
+            <ListItem>Begin Developing</ListItem>
             <ListItem>Add auto syncing </ListItem>
           </UnorderedList>
         </Box>
@@ -787,12 +789,24 @@ export default function github_pages_guide() {
               Your now have a next.js project! The first thing you should do is
               to open the project in your code editor. Then make an initial
               commit to your repository. This is done by adding all files to the
-              staging area, commiting them, and pushing them.
+              staging area, committing them, and pushing them.
+              <br />
+              <br />
+              Now you have to install the dependencies of the project. Make sure
+              you are in the root of the project and run this command:
+              </Text>
+              <Terminal
+              commands={`
+              npm install
+              `}
+            />
+            <Text>
+              This will install all the libraries and packages that the project
+              needs to run locally on your pc, into a folder called node_modules.
               <br />
               <br />
               You should now be able to see your project at you github pages
-              url. It may only display the readme page, but we will fix that in
-              the next segment.
+              url. It may only display the readme page, but we will fix that later.
               <br />
               <br />
               Using the deployed website under development is impractical, as it
@@ -808,29 +822,109 @@ export default function github_pages_guide() {
               npm run dev
               `}
             />
-            <Text>
-              You can now start developing your portfolio!
-              <br />
-              page.tsx is the main file for the page you see when you navigate
-              to the website. You can edit this file to change the content.
-              <br />
-              This guide wont go into detail on how to design your website, but
-              there are plenty guides online or you can ask ChatGPT for help.
-              <br />
-              <br />
-              If you want to learn more about Next.js, check out their{" "}
-              <Link
-                isExternal
-                color="blue.500"
-                href="https://nextjs.org/learn/basics/create-nextjs-app"
-              >
-                {" "}
-                tutorial
-              </Link>
-              .
-            </Text>
+            
           </Box>
         </StyledTextbox>
+        <StyledTextbox>
+          <Box>
+            <Text fontSize={"xl"} fontWeight={"bold"}>
+              The file structure
+            </Text>
+            <br />
+            <Image
+              src="/nextjs_filestructure.png"
+              alt="nextjs_filestructure"
+              height={"300px"}
+              width={"auto"}
+            />
+            <Text>
+              <br />
+              For now lets focus on the files you need to know about:
+              <br />
+              <br />
+            </Text>
+              <UnorderedList spacing={3}>
+                <ListItem>
+                  <Text as="b">/src:</Text> This is where you place your main
+                  application files. Inside it you will find the app folder, which
+                  contains the layout and pages of your website. Inside /src you 
+                  can put your components, styles, and other folders/files that you
+                  want to use in your project.
+                </ListItem>
+                <ListItem>
+                  <Text as="b">/app:</Text> This is where you place your
+                  rendered pages. If you want to render a page at /about, you
+                  should place it in a folder named "about" and name the file
+                  page.tsx. This is the new routing system I talked about earlier.
+                  NOTE: the file MUST be named page.tsx to be rendered. 
+                </ListItem>
+                <ListItem>
+                  <Text as="b">/app/page.tsx:</Text> This is the landing page of your
+                  website. You can edit this file to change the content of the
+                  page.
+                </ListItem>
+                <ListItem>
+                  <Text as="b">/app/layout.tsx:</Text> This is the layout of your
+                  website. The code in this file will be rendered on every page
+                  of your website. This is where you want to put a navbar, footer,
+                  or other elements that should be on every page. You can also
+                  make more layout file for folders deeper into your project. The layouts
+                  will then be nested, so you can have a layout for the whole website,
+                  and a layout for a specific section of the website.
+                </ListItem>
+                <ListItem>
+                  <Text as="b">/public:</Text> This is where you store static
+                  files, like images, that you want to use in your project. They will not be optimized when
+                  you build the project, so an alternative is to create an "assets" folder in the /src folder.
+                </ListItem>
+              </UnorderedList>
+              <Text>
+                <br />
+                These are the most important files for now. You can read more about the file structure by googling.
+              </Text>
+          </Box>
+        </StyledTextbox>
+        <PageDivider title="Begin developing" />
+          <Text>
+            Now that you have a project set up, you can start developing your
+            portfolio. The first thing you should do is to create a navbar. This
+            is the bar at the top of the page that contains links to other pages
+            of the website. You can use the component library Material UI to
+            import a prebuilt navbar, and customize it to your liking. You can
+            also create your own navbar from scratch, but this is more time
+            consuming.
+            <br />
+            <br />
+          </Text>
+          <StyledTextbox>
+            <Box>
+              <Text fontSize={"xl"} fontWeight={"bold"}>
+                Adding a navbar
+              </Text>
+              <Text mb={4}>
+                I like to create a "components" folder in the /src folder, and
+                place all my components in there. This keeps the project clean
+                and organized. I then make a "navbar.tsx" file in the components
+                folder, and add the code for the navbar.
+                <br />
+                <br />
+                I googled "Material UI navbar", found a component named Basic App Bar,
+                and copied the code into my navbar.tsx file. I then customized it
+                to my liking.
+                <br />
+                To render your navbar on every page, you need to import it into
+                the layout.tsx file (line 4). You can then add it to the layout component
+                like this (line 21):
+                <Image
+                  src="/navbar_import.png"
+                  alt="navbar_import"
+                  height={"400px"}
+                  width={"auto"}
+                 />
+
+              </Text>
+            </Box>
+          </StyledTextbox>
         <PageDivider title="Add auto syncing" />
         <StyledTextbox>
           <Box>
