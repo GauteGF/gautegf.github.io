@@ -933,6 +933,11 @@ export default function github_pages_guide() {
             </Text>
           </Box>
         </StyledTextbox>
+        <Text>
+          With this method you can add multipe components to you website and
+          build it up step by step. Try adding a footer and a couple other pages
+          your can link to.
+        </Text>
         <PageDivider title="Add auto syncing" />
         <StyledTextbox>
           <Box>
