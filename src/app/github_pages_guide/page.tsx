@@ -13,9 +13,7 @@ import {
   Code,
   Flex,
   Link,
-  List,
 } from "@chakra-ui/react";
-import { Roboto, Protest_Guerrilla } from "@next/font/google";
 
 interface StyledTextboxProps extends BoxProps {
   children: React.ReactNode;
@@ -60,7 +58,7 @@ export default function github_pages_guide() {
         <Text fontSize="xs">
           Author: Gaute Greiff Flægstad
           <br />
-          Last updated: August 22nd 2024
+          Last updated: September 21. 2024
           <br />
           <br />
         </Text>
@@ -111,6 +109,13 @@ export default function github_pages_guide() {
           that comes in handy when applying for jobs. Of course there are
           websites nowadays that can do this for you, but it`s a much bigger
           flex to have built it yourself!
+          <br />
+          <br />
+          Here is my work in progress portfolio for reference:
+          <Link isExternal color="blue.500" href="https://gautegf.github.io">
+            {" "}
+            gautegf.github.io
+          </Link>
         </Text>
         <PageDivider title="Course content" />
         <Box>
