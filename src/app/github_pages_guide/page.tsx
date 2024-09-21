@@ -609,7 +609,7 @@ export default function github_pages_guide() {
                   <Link
                     isExternal
                     color="blue.500"
-                    href="https://nodejs.org/en"
+                    href="https://github.com/coreybutler/nvm-windows"
                   >
                     {" "}
                     NVM for Windows Github Page
