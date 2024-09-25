@@ -13,7 +13,6 @@ import {
   ModalCloseButton,
   Button,
   useDisclosure,
-  Heading,
   SimpleGrid,
   HStack,
 } from "@chakra-ui/react";
@@ -22,26 +21,17 @@ import { useState } from "react";
 const projects = [
   {
     title: "Portfolio Guide",
-    imageSrc: "/portfolio_guide.png",
-    gifSrc: "/portfolio_guide_preview.gif",
+    imageSrc: "/portfolio_guide/portfolio_guide.png",
     description:
-      "A detailed guide on how to build a portfolio using React, Chakra UI, and TypeScript.",
+      "This is a project I started during the summer of 2024. As I knew I would be lead for DevOps in the coming project, I decided to create a guide for the team to prepare them for the projects to come. The focus of the guide is starting to learn the basics of Git and GitHub, as well as how to deploy a React app to GitHub Pages. It also instructs you to create an app with Next.js and teaches you about the file structure and how to get started with programming.",
     images: [
-      "/portfolio_guide.png",
-      "/portfolio_guide.png",
-      "/portfolio_guide.png",
+      "/portfolio_guide/portfolio_guide.png",
+      "/portfolio_guide/portfolio_guide2.png",
+      "/portfolio_guide/portfolio_guide3.png",
     ],
     tags: ["React", "Chakra UI", "Typescript"],
     projectLink: "https://gautegf.github.io/github_pages_guide",
-  },
-  {
-    title: "TEST PROJECT",
-    imageSrc: "/add_new_SSHKEY2.png",
-    gifSrc: "/add_new_SSHKEY2_hover.gif",
-    description: "TEST PROJECT",
-    images: ["/ml_project_1.png", "/ml_project_2.png", "/ml_project_3.png"],
-    tags: ["Python", "Machine Learning", "Data Science"],
-    projectLink: "https://github.com/gaute/project-two",
+    repositoryLink: "https://github.com/GauteGF/gautegf.github.io",
   },
 ];
 
@@ -61,11 +51,11 @@ const ProjectBox = ({
   project: {
     title: string;
     imageSrc: string;
-    gifSrc: string;
     description: string;
     images: string[];
     tags: string[];
     projectLink: string;
+    repositoryLink: string;
   };
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -84,7 +74,6 @@ const ProjectBox = ({
           transition: "0.3s",
           cursor: "pointer",
         }}
-        onMouseEnter={() => setImageSrc(project.gifSrc)}
         onMouseLeave={() => setImageSrc(project.imageSrc)}
         onClick={onOpen}
       >
@@ -123,13 +112,14 @@ const ProjectBox = ({
           <ModalCloseButton />
           <ModalBody flex="1" overflowY="auto">
             <Text mb={4}>{project.description}</Text>
-            <SimpleGrid columns={2} spacing={4}>
+            <SimpleGrid columns={1} spacing={8}>
               {project.images.map((imgSrc, i) => (
                 <Image
                   key={i}
                   src={imgSrc}
                   alt={`Project image ${i + 1}`}
                   borderRadius="md"
+                  border={`1px solid ${isOpen ? "teal" : "transparent"}`}
                 />
               ))}
             </SimpleGrid>
@@ -149,7 +139,7 @@ const ProjectBox = ({
             </Button>
             <Button
               as="a"
-              href={project.projectLink}
+              href={project.repositoryLink}
               target="_blank"
               colorScheme="teal"
               variant="outline"
