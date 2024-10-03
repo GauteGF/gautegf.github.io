@@ -93,7 +93,7 @@ const Home = () => {
             height="18vh"
           >
             <Heading as="h2" size="2xl" color="white" textAlign="center" mt={8}>
-              10+
+              5+
             </Heading>
             <Text color="teal.500" textAlign="center" mt={2}>
               Projects
