@@ -79,7 +79,6 @@ const projects = [
     repositoryLink: "https://github.com/GauteGF/movie-app",
     repositoryLinkClickable: true,
   },
-  
 ];
 
 const ProjectsGrid = () => {
@@ -160,7 +159,9 @@ const ProjectBox = ({
           <ModalHeader>{project.title}</ModalHeader>
           <ModalCloseButton />
           <ModalBody flex="1" overflowY="auto">
-            <Text mb={4} whiteSpace="pre-wrap">{project.description}</Text>
+            <Text mb={4} whiteSpace="pre-wrap">
+              {project.description}
+            </Text>
             <SimpleGrid columns={1} spacing={8}>
               {project.images.map((imgSrc, i) => (
                 <Image
@@ -198,7 +199,7 @@ const ProjectBox = ({
               >
                 View Project
               </Button>
-            )}  
+            )}
             {project.repositoryLinkClickable ? (
               <Button
                 as="a"
