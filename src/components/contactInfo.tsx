@@ -34,7 +34,7 @@ const ContactInfo = () => {
           <Text>Private: gaute.flagstad@gmail.com</Text>
           <Text>Propulse: gaute.flaegstad@propulsentnu.no</Text>
           <Text>Student: gautegf@stud.ntnu.no</Text>
-          <Text>Work: ...</Text>
+          <Text>Work: gaute.flaegstad@nhn.no</Text>
           <Text fontSize="sm" color="gray.400">
             Preferably use my private or Propulse mail.
           </Text>
