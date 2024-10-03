@@ -65,7 +65,7 @@ const Sidebar = () => {
         <Avatar
           size="xl"
           name="Default Image"
-          src="https://via.placeholder.com/150"
+          src="/profile_picture.jpg"
           mb={4}
         />
         <Text fontSize="xl" fontWeight="bold">
