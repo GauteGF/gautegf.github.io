@@ -13,7 +13,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-EE94LQSBYT"></script>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-EE94LQSBYT"
+        ></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
